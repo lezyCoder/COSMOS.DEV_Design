@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nebula-blue: #00c8ff;
+  --nebula-purple: #9b59b6;
+  --star-gold: #ffd700;
+  --plasma-green: #00ff9c;
+  --deep-space: #020818;
+  --card-bg: rgba(10, 20, 50, 0.88);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--nebula-blue);
+  overflow-x: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  filter: brightness(0.4);
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 2rem 3rem;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--star-gold);
+  max-width: 500px;
+}
+
+.card1 {
+  background-color: rgba(10, 20, 50, 0.85);
+  color: white;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.courses p,
+.planet p {
+  color: var(--nebula-purple);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    gap: 2rem;
+    padding: 4rem 1rem 2rem;
+  }
+}
