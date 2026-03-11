@@ -21,15 +21,17 @@
     <!-- Navbar -->
     <header>
       <nav
-        class="navbar navbar-expand-lg sticky-top navbar-dark bg-transparent"
+        class="navbar navbar-expand-lg sticky-top "
       >
         <div
           class="container d-flex align-items-center justify-content-between"
         >
+          <!-- Logo -->
           <div class="logo">
             <p class="m-0 fw-bold">COSMOS.DEV</p>
           </div>
 
+          <!-- Mobile Toggle Button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -42,12 +44,22 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
+          <!-- Navbar Content -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Search -->
+            <form
+              class="d-none d-xl-flex w-50 mx-auto my-2 my-lg-0"
+              role="search"
+            >
+              <input class="form-control" type="search" placeholder="Search" />
+            </form>
+
+            <!-- Links -->
             <ul class="navbar-nav ms-auto d-flex align-items-center gap-lg-4">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link">Home</a></li>
+              <li class="nav-item"><a class="nav-link">About</a></li>
+              <li class="nav-item"><a class="nav-link">Courses</a></li>
+              <li class="nav-item"><a class="nav-link">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -60,7 +72,7 @@
       <section class="hero text-white">
         <div class="container hero-content text-center mb-5">
           <h1 class="display-4 fw-bold mb-3">Welcome to COSMOS</h1>
-          <p class="lead mx-auto" >
+          <p class="lead mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
             officiis nulla natus repellat assumenda maiores!
           </p>
