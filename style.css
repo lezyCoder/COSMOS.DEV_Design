@@ -43,8 +43,16 @@ header,
 main,
 footer {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
+
+/* Nav section */
+
+nav .nav-item .nav-links {
+
+  color: var(--plasma-green)
+}
+
 
 /* Hero */
 .hero {
@@ -63,8 +71,8 @@ footer {
 }
 
 .card1 {
-  background-color: rgba(10, 20, 50, 0.85);
-  color: white;
+  background-color: var(--deep-space);
+  color: var(--nebula-purple);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
