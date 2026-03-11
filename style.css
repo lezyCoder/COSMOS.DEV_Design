@@ -46,6 +46,73 @@ footer {
   z-index: 1;
 }
 
+:root {
+  --nebula-blue: #00c8ff;
+  --nebula-purple: #9b59b6;
+  --star-gold: #ffd700;
+  --plasma-green: #00ff9c;
+  --deep-space: #020818;
+  --card-bg: rgba(10, 20, 50, 0.88);
+}
+
+/* Navbar background */
+.navbar {
+  background: var(--deep-space);
+}
+
+/* Logo */
+.logo p {
+  color: var(--star-gold);
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.nav-link {
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: var(--nebula-blue);
+}
+
+/* Active / Selected */
+.nav-link.active {
+  color: var(--star-gold);
+}
+
+/* Search Input */
+.form-control {
+  background: var(--card-bg);
+  border: 1px solid var(--nebula-purple);
+  color: white;
+}
+
+/* Placeholder */
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Input Focus */
+.form-control:focus {
+  background: var(--card-bg);
+  border-color: var(--nebula-blue);
+  box-shadow: 0 0 8px var(--nebula-blue);
+  color: white;
+}
+
+/* Toggler Icon */
+.navbar-toggler {
+  border-color: var(--nebula-blue);
+}
+
+/* Custom toggler icon */
+.navbar-toggler-icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(479%)
+    hue-rotate(165deg) brightness(101%) contrast(102%);
+}
 /* Hero */
 .hero {
   min-height: 100vh;
