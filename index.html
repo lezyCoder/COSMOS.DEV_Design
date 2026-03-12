@@ -11,7 +11,12 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="70"
+    tabindex="0"
+  >
     <!-- Video Background -->
     <video autoplay muted loop id="bg-video">
       <source src="./spaceBackground.mp4" type="video/mp4" />
@@ -20,9 +25,7 @@
 
     <!-- Navbar -->
     <header>
-      <nav
-        class="navbar navbar-expand-lg sticky-top "
-      >
+      <nav class="navbar navbar-expand-lg sticky-top">
         <div
           class="container d-flex align-items-center justify-content-between"
         >
@@ -71,37 +74,55 @@
       <!-- Hero Section -->
       <section class="hero text-white">
         <div class="container hero-content text-center mb-5">
-          <h1 class="display-4 fw-bold mb-3">Welcome to COSMOS</h1>
+          <h1 class="display-4 fw-bold mb-3">Welcome to <span>COSMOS</span></h1>
           <p class="lead mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-            officiis nulla natus repellat assumenda maiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            aperiam iure magnam!
           </p>
         </div>
+      </section>
 
+      <!-- stats -->
+      <section class="stats" id="stats">
         <div class="container cards-container">
           <div class="row g-4 justify-content-center">
+            <!-- Card 1  -->
             <div class="col-lg-3 col-md-6 col-6">
-              <div class="card card1 text-center p-4 shadow-sm rounded">
-                <h2 class="display-4 mb-2">2</h2>
+              <div
+                class="card card1 text-center p-4 d-flex align-items-center justify-content-between"
+              >
+                <h2 class="display-4 mb-2">6</h2>
                 <p class="mb-0">Total Planets</p>
               </div>
             </div>
+
+            <!-- Card 2 -->
             <div class="col-lg-3 col-md-6 col-6">
-              <div class="card card1 text-center p-4 shadow-sm rounded">
-                <h2 class="display-4 mb-2">2</h2>
-                <p class="mb-0">XP Earned</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-6">
-              <div class="card card1 text-center p-4 shadow-sm rounded">
+              <div
+                class="card card1 text-center p-4 d-flex align-items-center justify-content-between"
+              >
                 <h2 class="display-4 mb-2">2</h2>
                 <p class="mb-0">Planets Conquered</p>
               </div>
             </div>
+
+            <!-- Card 3 -->
             <div class="col-lg-3 col-md-6 col-6">
-              <div class="card card1 text-center p-4 shadow-sm rounded">
+              <div
+                class="card card1 text-center p-4 d-flex align-items-center justify-content-between"
+              >
                 <h2 class="display-4 mb-2">2</h2>
                 <p class="mb-0">In Orbit</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 col-6">
+              <div
+                class="card card1 text-center p-4 d-flex align-items-center justify-content-between"
+              >
+                <h2 class="display-4 mb-2">3750</h2>
+                <p class="mb-0">XP Earned</p>
               </div>
             </div>
           </div>
@@ -116,25 +137,171 @@
 
         <div class="container planet-container">
           <div class="row g-4">
-            <div class="col-12 col-md-6">
+            <!-- HTML  -->
+            <div class="col-12 col-md-6 planet-card">
               <div class="planet card p-4">
-                <h2>HTML</h2>
-                <p>
+                <h3 class="course-label">HTML FOUNDATION</h3>
+                <p class="course-topic">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                   tenetur labore laboriosam facere distinctio aliquid optio
                   tempore corporis, nostrum maxime.
                 </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
               </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <!-- CSS  -->
+            <div class="col-12 col-md-6 planet-card">
               <div class="planet card p-4">
-                <h2>CSS</h2>
-                <p>
+                <h3 class="course-label">CSS</h3>
+                <p class="course-topic">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                   tenetur labore laboriosam facere distinctio aliquid optio
                   tempore corporis, nostrum maxime.
                 </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
+              </div>
+            </div>
+
+            <!-- BOOTSTRAP -->
+            <div class="col-12 col-md-6 planet-card">
+              <div class="planet card p-4">
+                <h3 class="course-label">BOOTSTRAP</h3>
+                <p class="course-topic">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  tenetur labore laboriosam facere distinctio aliquid optio
+                  tempore corporis, nostrum maxime.
+                </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
+              </div>
+            </div>
+
+            <!-- JAVASCRIPT  -->
+            <div class="col-12 col-md-6 planet-card">
+              <div class="planet card p-4">
+                <h3 class="course-label">JAVASCRIPT</h3>
+                <p class="course-topic">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  tenetur labore laboriosam facere distinctio aliquid optio
+                  tempore corporis, nostrum maxime.
+                </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
+              </div>
+            </div>
+
+            <!-- REACT -->
+            <div class="col-12 col-md-6 planet-card">
+              <div class="planet card p-4">
+                <h3 class="course-label">React</h3>
+                <p class="course-topic">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  tenetur labore laboriosam facere distinctio aliquid optio
+                  tempore corporis, nostrum maxime.
+                </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 40%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
+              </div>
+            </div>
+
+            <!-- SPRINGBOOT -->
+            <div class="col-12 col-md-6 planet-card">
+              <div class="planet card p-4 disabled">
+                <h3 class="course-label">SPRINGBOOT</h3>
+                <p class="course-topic">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                  tenetur labore laboriosam facere distinctio aliquid optio
+                  tempore corporis, nostrum maxime.
+                </p>
+
+                <div class="course-progress mt-4">
+                  <div class="progress">
+                    <div
+                      class="progress-bar progress-fill"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+
+                  <div class="course-score d-flex justify-content-between">
+                    <p>XP earned</p>
+                    <p>100%</p>
+                  </div>
+                </div>
+
+                <p class="course-status mt-4">✅Conqured</p>
               </div>
             </div>
           </div>
@@ -142,9 +309,21 @@
       </section>
     </main>
 
+    <!-- Create  -->
+    <section>
+      <div class="create-icon position-fixed bottom-0 end-0 m-4 z-3">
+        <p class="icon-btn">+</p>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="text-center p-3 text-white">
-      COSMOS.DEV created with ❤️ by @lezyCoder
+      COSMOS.DEV created with ❤️ by
+      <span
+        ><a href="https://github.com/lezyCoder" target="_blank"
+          >lezyCoder</a
+        ></span
+      >
     </footer>
 
     <script
