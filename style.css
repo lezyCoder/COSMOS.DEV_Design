@@ -1,3 +1,6 @@
+/* Orbitron google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -17,9 +20,13 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
+p {
+  margin: 0;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -53,34 +60,47 @@ footer {
   --plasma-green: #00ff9c;
   --deep-space: #020818;
   --card-bg: rgba(10, 20, 50, 0.88);
+  --glow-blue: rgba(0, 200, 255, 0.55);
+  --glow-green: rgba(0, 255, 156, 0.55);
+  --glow-gold: rgba(255, 215, 0, 0.55);
 }
 
 /* Navbar background */
 .navbar {
-  background: var(--deep-space);
+  /* background: var(--deep-space); */
+  -webkit--backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 200, 255, 0.18);
 }
 
 /* Logo */
 .logo p {
-  color: var(--star-gold);
+  color: var(--nebula-blue);
   letter-spacing: 1px;
+  font-family: "Orbitron";
 }
 
 /* Nav Links */
 .nav-link {
-  color: white;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
   transition: 0.3s;
+  /* font-size: 0.72rem; */
+  letter-spacing: 1.5px;
+}
+
+.nav-link.active,
+.nav-link.active:visited {
+  color: var(--plasma-green);
+  border-bottom: 2px solid var(--plasma-green);
+  text-shadow:
+    0 0 5px var(--plasma-green),
+    0 0 10px var(--plasma-green);
 }
 
 /* Hover */
 .nav-link:hover {
   color: var(--nebula-blue);
-}
-
-/* Active / Selected */
-.nav-link.active {
-  color: var(--star-gold);
+  cursor: pointer;
 }
 
 /* Search Input */
@@ -113,6 +133,7 @@ footer {
   filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(479%)
     hue-rotate(165deg) brightness(101%) contrast(102%);
 }
+
 /* Hero */
 .hero {
   min-height: 100vh;
@@ -123,28 +144,169 @@ footer {
 }
 
 .hero-content p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--star-gold);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 14px;
+  letter-spacing: 4px;
   max-width: 500px;
 }
 
+span {
+  color: var(--nebula-blue);
+  font-family: "Orbitron";
+}
+
+/* stats section  */
 .card1 {
   background-color: rgba(10, 20, 50, 0.85);
-  color: white;
+  font-family: "Orbitron";
+  letter-spacing: 2px;
+  color: var(--nebula-blue);
+  border: 1px solid rgba(0, 200, 255, 0.18);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 200px;
+  /* width: 200px; */
+}
+.card1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 5px 2px var(--glow-gold);
+  border: 1px solid var(--plasma-green);
+}
+
+/* Courses  */
+
+.planet {
+  border: 1px solid rgba(0, 200, 255, 0.18);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-
-.card1:hover {
+.planet:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 2px var(--glow-gold);
+  border: 1px solid var(--plasma-green);
 }
 
 .courses p,
 .planet p {
-  color: var(--nebula-purple);
+  color: var(--nebula-blue);
+}
+
+.planet {
+  background-color: var(--card-bg);
+}
+
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  background: linear-gradient(
+    120deg,
+    var(--nebula-blue),
+    var(--plasma-green),
+    var(--nebula-purple)
+  );
+  border-radius: 10px;
+}
+
+.course-score p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+.course-score p {
+  margin: 0;
+}
+.course-label {
+  font-family: "Orbitron";
+  color: var(--star-gold);
+}
+
+.courses .course-topic {
+  color: rgba(255, 255, 255, 0.45);
+}
+.courses .course-status {
+  font-family: "Orbitron";
+  max-width: 150px;
+  border: 1px solid var(--star-gold);
+  border-radius: 20px;
+  color: var(--plasma-green);
+  /* padding: 5px; */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Disabled Course  */
+.planet.disabled {
+  /* opacity: 0.75;
+  filter: grayscale(70%); */
+  pointer-events: none;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.23);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.planet.disabled .progress-fill {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+}
+
+.planet.disabled .course-status {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.planet.disabled .course-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Create Icon */
+.create-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  /* padding: 12px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  font-weight: 500;
+  background: linear-gradient(
+    130deg,
+    var(--star-gold),
+    var(--nebula-blue),
+    var(--plasma-green),
+    var(--nebula-purple)
+  );
+  color: white;
+  cursor: pointer;
+}
+
+.icon-btn {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: rotate(45deg);
+}
+.create-icon:hover {
+  /* border: 2px solid var(--star-gold); */
+  box-shadow: 0 0 5px 10px var(--glow-gold);
+  cursor: pointer;
+}
+
+/* Footer */
+
+span a {
+  text-decoration: none;
+  color: var(--nebula-blue);
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 768px) {
